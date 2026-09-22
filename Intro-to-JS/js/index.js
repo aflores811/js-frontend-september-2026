@@ -278,5 +278,50 @@ function addPriceItem(price, discountCode) {
         price = price / 2
     }
     priceTotal += price
-    return priceTotal
+    // return priceTotal
+}
+
+
+
+// HTML is how we start to build the webpage
+
+// DOM - document object model
+// this is the living breathing version of our webpage
+
+// TECHNICALLY when we manipulate a website using JS
+// it's called DOM manipulation
+
+// query selector gets items
+const subtitle = document.querySelector("p")
+
+// changes the textContent
+subtitle.textContent = "Our coffee is great!"
+
+const coffeeImg = document.querySelector("img")
+coffeeImg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNtVkMHG5RUFDvLCaNlBFTRl2h3PQrPecOVT5JX_sPeNyJ-ZouohxYrsM&s=10"
+
+// adding elements
+
+function renderCoffeeCup() {
+    // step one - create blank element
+    const newImage = document.createElement("img")
+    // step two - change the src or textContent or whatever
+    newImage.src = "https://i.pinimg.com/736x/a9/c7/1d/a9c71d143142ff0f13c29685a64ba4ac.jpg"
+    newImage.style.maxWidth = "100px"
+    // step three - put the element somewhere
+    document.body.append( newImage )
+}
+
+
+coffeesBought = 0
+const coffeeButton = document.querySelector('button')
+
+function addCoffeesBought() {
+    coffeesBought += 1
+    coffeeButton.textContent = `You have bought ${coffeesBought} coffees`
+}
+
+function handleClick() {
+    addCoffeesBought()
+    renderCoffeeCup()
 }

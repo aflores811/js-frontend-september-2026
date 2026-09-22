@@ -6,11 +6,13 @@
     <title>Intro to JS</title>
     
     <!-- LINK TO THE JS FILE -->
-    <script src="js/index.js"></script>
+    <script defer src="js/index.js"></script>
+    <!-- defer means wait until the page loads before running the script -->
 
     <style>
         img {
             width: 100%;
+            max-width: 600px;
         }
     </style>
 
@@ -24,9 +26,9 @@
         <p>The best coffee around!</p>
     </header>
 
-    <img src="https://media.cnn.com/api/v1/images/stellar/prod/150929101049-black-coffee-stock.jpg?q=w_3000,h_3074,x_0,y_0,c_fill">
+    <img onclick="handleClick()" src="https://media.cnn.com/api/v1/images/stellar/prod/150929101049-black-coffee-stock.jpg?q=w_3000,h_3074,x_0,y_0,c_fill">
 
-    <button>Order A Coffee</button>
+    <button onclick="handleClick()">Order A Coffee</button>
 
 </body>
 </html>
