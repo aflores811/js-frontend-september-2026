@@ -204,7 +204,8 @@ false
 
 function isItCake(str) {
     // accepts a string `str`
-    // if the string is "cake" return true
+    // if the string is "cake" return 'true'
+    // otherwise return 'false'
     // BONUS: if the string includes "cake" return true
     // BONUS BONUS: same as above but it ignores uppercase/lowercase
 }
@@ -236,4 +237,5 @@ function addPriceItem(price, discountCode) {
     // adds the price to the `priceTotal`
     // return the result of the `priceTotal`
     // BONUS: if a `discountCode` exists, give a discount of 50% for the item (divide `price` by 2)
+    // BONUS: The discountCode only works if it is a "string"
 }
