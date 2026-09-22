@@ -201,41 +201,83 @@ false
 
 // EXERCISES //////////////////////////////////////////////////
 
+// accepts a string `str`
+// if the string is "cake" return 'true'
+// otherwise return 'false'
+// BONUS: if the string includes "cake" return true
+// BONUS BONUS: same as above but it ignores uppercase/lowercase
 
-function isItCake(str) {
-    // accepts a string `str`
-    // if the string is "cake" return 'true'
-    // otherwise return 'false'
-    // BONUS: if the string includes "cake" return true
-    // BONUS BONUS: same as above but it ignores uppercase/lowercase
+function isItCake( str ) {
+    // long version
+    const lowerStr = str.toLowerCase()
+    if ( lowerStr.includes("cake") ) {
+        return true
+    } else {
+        return false
+    }
+
+    // short version
+    return str.toLowerCase().includes('cake')
 }
 
+
+// accepts no arguments
+// increase bagels by one
+// if bagels is less than 13: returns "We have X bagels. We need more"
+// if bagels is 13: returns "We have a baker's dozen."
+// if bagels is over 13: returns "We have X bagels. That's too many."
 
 let bagels = 0
 
 function packBagel() {
-    // accepts no arguments
-    // increase bagels by one
-    // if bagels is less than 13: returns "We have X bagels. We need more"
-    // if bagels is 13: returns "We have a baker's dozen."
-    // if bagels is over 13: returns "We have X bagels. That's too many."
+    bagels++
+
+    if (bagels < 13) {
+        return `We have ${bagels} bagels. We need more`
+    } else if (bagels === 13) {
+        return "We have a baker's dozen."
+    } else if (bagels > 13) {
+        return `We have ${bagels} bagels. That's too many.`
+    }
 }
 
+// accepts a number `num`
+// return `true` if the number is even
+// return `false` if the number is odd
+// you will need to look up a special operator % to do this!
 
 function isEven(num) {
-    // accepts a number `num`
-    // return `true` if the number is even
-    // return `false` if the number is odd
-    // you will need to look up a special operator % to do this!
+    if (num % 2 === 0) {
+        return true // we have an even number
+    } else {
+        return false // we have a remained and this is NOT even
+    }
+
+    // shortened version
+    return num % 2 === 0
 }
 
+// accepts a number `price`
+// adds the price to the `priceTotal`
+// return the result of the `priceTotal`
+// BONUS: if a `discountCode` exists, give a discount of 50% for the item (divide `price` by 2)
+// BONUS: The discountCode only works if it is a "string"
 
 let priceTotal = 0
 
+// function addPriceItem(price, discountCode) {
+//     if ( typeof discountCode === "string" ) {
+//         price = price / 2
+//     }
+//     priceTotal += price
+//     return priceTotal
+// }
+
 function addPriceItem(price, discountCode) {
-    // accepts a number `price`
-    // adds the price to the `priceTotal`
-    // return the result of the `priceTotal`
-    // BONUS: if a `discountCode` exists, give a discount of 50% for the item (divide `price` by 2)
-    // BONUS: The discountCode only works if it is a "string"
+    if ( discountCode === "GIVEDISCOUNT" ) {
+        price = price / 2
+    }
+    priceTotal += price
+    return priceTotal
 }
+
