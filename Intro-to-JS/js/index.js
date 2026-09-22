@@ -280,4 +280,3 @@ function addPriceItem(price, discountCode) {
     priceTotal += price
     return priceTotal
 }
-
