@@ -7,6 +7,9 @@ function fullName() {
 
 }
 
+function fullName(firstName, lastName) {
+    return firstName + " " + lastName;
+}
 
 
 // 2 /////////////////////////////////////////////////////////////////////////////////
@@ -21,6 +24,9 @@ function validId() {
 
 }
 
+function validId(year) {
+    return year >= 2026;
+}
 
 
 // 3 //////////////////////////////////////////////////////////////////////////////////
@@ -38,3 +44,8 @@ function validId() {
 function calculate() {
 
 }
+
+function calculate(num1, num2, operation) {
+    Number = "num1", "num2"
+    String = "operation"
+  }
